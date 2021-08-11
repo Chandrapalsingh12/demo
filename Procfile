@@ -1,0 +1,1 @@
+web: gunicorn lucicoder.wsgi --log-file -

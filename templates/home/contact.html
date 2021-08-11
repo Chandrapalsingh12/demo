@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Pge{% endblock title %}
+
+{% block contactactive %} active {% endblock contactactive %}
+{% block body %} 
+
+ 
+
+<div class="container">
+ <h2>Contact luciCoder</h2>
+
+
+                <form action="/contact/" method='post'>{% csrf_token %}
+
+                    <div class="form-group my-4">
+                        <label for="name"><b>Your Name</b></label>
+                        <input type="name" class="form-control" id="name" placeholder="Enter your Name" name="name">
+                    </div>
+                    <div class="form-group my-4">
+                        <label for="cemail"><b>Your Email</b></label>
+                        <input type="email" class="form-control" id="cemail" placeholder="Enter your Email" name="email">
+                    </div>
+                    <div class="form-group my-4 ">
+                        <label for="phone"><b>Your Phone Number (with country code)</b></label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your Phone Number"
+                            name="phone">
+                    </div>
+                    <div class="form-group my-4">
+                        <label for="message"><b>Describe what you want to contact me for here</b></label>
+                        <textarea type="text" class="form-control" id="message" placeholder="Your message" name="message"></textarea>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m"></div>
+
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+
+                
+
+        </div>
+</div>
+
+
+{% endblock body %} 
+
